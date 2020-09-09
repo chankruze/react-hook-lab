@@ -12,16 +12,23 @@ function HookMouseMove() {
     const [x, setX] = useState(0)
 
     const logMousePosition = e => {
-        console.log('mousemove event');
+        console.log('logMousePosition - mousemove event');
         setX(e.clientX)
         setY(e.clientY)
     }
 
-    // componentDidUpdate(), componentDidMount()
+    // componentDidMount()
     useEffect(() => {
         console.log('useEffect called')
         window.addEventListener('mousemove', logMousePosition)
-    }, [])
+
+        // cleanup function = componentWillUnmount()
+        return () => {
+            console.log('useEffect - Unmount Component ')
+            // unregister event listener
+            window.removeEventListener('mousemove', logMousePosition)
+        }
+    }, []) // no dependency array (render only once) = componentDidUpdate()
 
     return (
         <div>
