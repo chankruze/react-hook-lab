@@ -12,6 +12,7 @@ function HookCounterOne() {
     const [count, setCount] = useState(0)
     const [name, setName] = useState('')
 
+    // componentDidUpdate(), componentDidMount()
     useEffect(() => {
         console.log(`useEffect - Updating Document Title`)
         document.title = `Clicked ${count} times`
@@ -24,11 +25,11 @@ function HookCounterOne() {
     const updateName = (e) => {
         setName(e.target.value)
     }
-    
+
     return (
         <div>
             <h2>Functional Component + Hooks</h2>
-            <input type="text" value={name} onChange={updateName}/>
+            <input type="text" value={name} onChange={updateName} />
             <button onClick={incrementCount}>Clicked {count} times</button>
         </div>
     )
