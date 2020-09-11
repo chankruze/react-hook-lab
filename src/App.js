@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import DataFetching from './components/DataFetching';
-import ComponentA from './components/usecontext/ComponentA';
+import ReducerCounterOne from './components/usereducer/ReducerCounterOne';
 
 const user1 = {
   name: 'Chandan',
@@ -22,12 +21,7 @@ export const UserContextTwo = React.createContext()
 function App() {
   return (
     <div className="App">
-      {/* <DataFetching /> */}
-      <UserContextOne.Provider value={user1}>
-        <UserContextTwo.Provider value={user2}>
-          <ComponentA />
-        </UserContextTwo.Provider>
-      </UserContextOne.Provider>
+      <ReducerCounterOne/>
     </div>
   );
 }
