@@ -1,40 +1,13 @@
-import React from 'react';
-import './App.css';
-import ReducerGlobalA from './components/usereducer/ReducerGlobalA';
-
-export const CounterContextGlobal = React.createContext()
-
-const initialCount = 0
-const reducer = (count, action) => {
-  switch (action) {
-    case 'increment':
-      return count + 1
-
-    case 'decrement':
-      return count - 1
-
-    case 'reset':
-      return initialCount
-
-    default:
-      return count
-  }
-}
+import React from 'react'
+import './App.css'
+import DataFetchingOne from './components/usereducer/DataFetchingOne'
 
 function App() {
-
-  const [count, dispatch] = React.useReducer(reducer, initialCount)
-
   return (
-    <CounterContextGlobal.Provider
-      value={{ countState: count, countDispatch: dispatch }}
-    >
-      <div className="App">
-        <h1>{count}</h1>
-        <ReducerGlobalA />
-      </div>
-    </CounterContextGlobal.Provider>
-  );
+    <div className="App">
+      <DataFetchingOne />
+    </div>
+  )
 }
 
 export default App;
