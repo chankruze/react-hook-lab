@@ -7,6 +7,8 @@ Copyright (c) Geekofia 2020 and beyond
 
 import React from 'react'
 
+// local state management with useReducer
+
 const initialState = 0
 
 const updateCount = (count, action) => {

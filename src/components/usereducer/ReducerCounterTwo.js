@@ -7,6 +7,8 @@ Copyright (c) Geekofia 2020 and beyond
 
 import React from 'react'
 
+// local state management with useReducer
+
 // state is a object
 const initialState = {
     counterOne: 0,
