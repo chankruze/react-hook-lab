@@ -1,13 +1,15 @@
 import React from 'react'
 import './App.css'
-import BadCounter from './components/usememo/BadCounter'
-import MemoizedCounter from './components/usememo/MemoizedCounter'
+import ClassTimer from './components/useref/ClassTimer'
+import FocusInput from './components/useref/FocusInput'
+import HookTimer from './components/useref/HookTimer'
 
 function App() {
   return (
     <div className="App">
-      <BadCounter/>
-      <MemoizedCounter/>
+      {/* <FocusInput /> */}
+      <ClassTimer/>
+      <HookTimer/>
     </div>
   )
 }
