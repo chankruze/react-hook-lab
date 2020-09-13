@@ -1,11 +1,13 @@
 import React from 'react'
 import './App.css'
-import ParentComponent from './components/usecallback/ParentComponent'
+import BadCounter from './components/usememo/BadCounter'
+import MemoizedCounter from './components/usememo/MemoizedCounter'
 
 function App() {
   return (
     <div className="App">
-      <ParentComponent />
+      <BadCounter/>
+      <MemoizedCounter/>
     </div>
   )
 }
